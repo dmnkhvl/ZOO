@@ -3,7 +3,7 @@
 
 int main() {
     Grid* Map = new Grid();
-    Map->printGrid();
+    Map->print();
 
     return 0;
 }
