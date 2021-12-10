@@ -4,13 +4,14 @@
 
 #ifndef BUDOVATELSKA_HRA_ZOOPROJEKT_GAME_H
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_GAME_H
-
+#include "World/Grid.h"
 
 class Game {
+    Grid* m_map;
 public:
     Game();
     void play();
-    void mapInit();
+    void mapInic();
     void mainDesicionSwitch();
 };
 

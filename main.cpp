@@ -1,9 +1,9 @@
 #include <iostream>
 #include "World/Grid.h"
+#include "Game.h"
 
 int main() {
-    Grid* Map = new Grid();
-    Map->print();
-
+    Game* game = new Game();
+    game->play();
     return 0;
 }
