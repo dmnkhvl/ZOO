@@ -6,7 +6,7 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_WAVE_H
 
 
-#include "PlayingTile.h"
+#include "../PlayingTile.h"
 
 class Wave: public PlayingTile{
 public:

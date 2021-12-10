@@ -1,5 +1,5 @@
 #include <iostream>
-#include "World/Grid.h"
+#include "World/Map.h"
 #include "Game.h"
 
 int main() {

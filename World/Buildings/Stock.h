@@ -6,7 +6,7 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_STOCK_H
 
 
-#include "PlayingTile.h"
+#include "../PlayingTile.h"
 
 class Stock: public PlayingTile{
     int m_wood = 0;

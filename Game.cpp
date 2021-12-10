@@ -7,7 +7,7 @@
 
 
 void Game::mapInic() {
-    m_map = new Grid();
+    m_map = new Map();
 }
 
 void Game::play() {

@@ -3,13 +3,13 @@
 //
 
 #include <iostream>
-#include "Grid.h"
-#include "Stock.h"
-#include "Wave.h"
-#include "Wall.h"
-#include "Gate.h"
+#include "Map.h"
+#include "Buildings/Stock.h"
+#include "Buildings/Wave.h"
+#include "Buildings/Wall.h"
+#include "Buildings/Gate.h"
 
-Grid::Grid() {
+Map::Map() {
     //inicializacia
     std::vector<PlayingTile*> row1(9, nullptr);
     std::vector<PlayingTile*> row2(10, nullptr);
@@ -147,7 +147,7 @@ Grid::Grid() {
 
 }
 
-void Grid::print() {
+void Map::print() {
     std::cout << "-----------------------MAP-----------------------" << std::endl;
     for(auto row:m_grid){
         for(auto PlayingTile:row){
@@ -160,11 +160,11 @@ void Grid::print() {
 
 }
 
-//void Grid::accessStock() {
+//void Map::accessStock() {
 //    m_grid.at(2)
 //}
 
-//void Grid::addBuilding(unsigned int row, unsigned int col, Building type) {
+//void Map::addBuilding(unsigned int row, unsigned int col, Building type) {
 //    if (type == Building::Base && base == 0){
 //        Base* base = new Base();
 //        base->print();

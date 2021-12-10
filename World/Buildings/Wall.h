@@ -6,7 +6,7 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_WALL_H
 
 
-#include "PlayingTile.h"
+#include "../PlayingTile.h"
 
 class Wall: public PlayingTile{
 public:

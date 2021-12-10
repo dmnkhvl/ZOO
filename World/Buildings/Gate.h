@@ -6,7 +6,7 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_GATE_H
 
 
-#include "PlayingTile.h"
+#include "../PlayingTile.h"
 
 class Gate: public PlayingTile{
 public:
