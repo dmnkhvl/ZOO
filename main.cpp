@@ -1,6 +1,9 @@
 #include <iostream>
+#include "World/Grid.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Grid* Map = new Grid();
+    Map->printGrid();
+
     return 0;
 }
