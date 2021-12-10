@@ -4,10 +4,14 @@
 
 #include <iostream>
 #include "Grid.h"
+#include "Stock.h"
+#include "Wave.h"
+#include "Wall.h"
+#include "Gate.h"
 
 Grid::Grid() {
     //inicializacia
-    std::vector<PlayingTile*> row1(10, nullptr);
+    std::vector<PlayingTile*> row1(9, nullptr);
     std::vector<PlayingTile*> row2(10, nullptr);
     std::vector<PlayingTile*> row3(10, nullptr);
     std::vector<PlayingTile*> row4(10, nullptr);
@@ -19,18 +23,17 @@ Grid::Grid() {
     std::vector<PlayingTile*> row10(10, nullptr);
     //naplnenie
 
-    row1.at(0) = new EmptyPlayingTile;
-    row1.at(1) = new EmptyPlayingTile;
-    row1.at(2) = new EmptyPlayingTile;
-    row1.at(3) = new EmptyPlayingTile;
-    row1.at(4) = new EmptyPlayingTile;
-    row1.at(5) = new EmptyPlayingTile;
-    row1.at(6) = new EmptyPlayingTile;
-    row1.at(7) = new EmptyPlayingTile;
-    row1.at(8) = new EmptyPlayingTile;
-    row1.at(9) = new EmptyPlayingTile;
+    row1.at(0) = new Wall();
+    row1.at(1) = new Wall();
+    row1.at(2) = new Wall();
+    row1.at(3) = new Wall();
+    row1.at(4) = new Gate();
+    row1.at(5) = new Wall();
+    row1.at(6) = new Wall();
+    row1.at(7) = new Wall();
+    row1.at(8) = new Wall();
 
-    row2.at(0) = new EmptyPlayingTile;
+    row2.at(0) = new Base();
     row2.at(1) = new EmptyPlayingTile;
     row2.at(2) = new EmptyPlayingTile;
     row2.at(3) = new EmptyPlayingTile;
@@ -39,7 +42,7 @@ Grid::Grid() {
     row2.at(6) = new EmptyPlayingTile;
     row2.at(7) = new EmptyPlayingTile;
     row2.at(8) = new EmptyPlayingTile;
-    row2.at(9) = new EmptyPlayingTile;
+    row2.at(9) = new Stock();
 
     row3.at(0) = new EmptyPlayingTile;
     row3.at(1) = new EmptyPlayingTile;
@@ -96,38 +99,38 @@ Grid::Grid() {
     row7.at(8) = new EmptyPlayingTile;
     row7.at(9) = new EmptyPlayingTile;
 
-    row8.at(0) = new EmptyPlayingTile;
-    row8.at(1) = new EmptyPlayingTile;
-    row8.at(2) = new EmptyPlayingTile;
-    row8.at(3) = new EmptyPlayingTile;
-    row8.at(4) = new EmptyPlayingTile;
-    row8.at(5) = new EmptyPlayingTile;
-    row8.at(6) = new EmptyPlayingTile;
-    row8.at(7) = new EmptyPlayingTile;
-    row8.at(8) = new EmptyPlayingTile;
-    row8.at(9) = new EmptyPlayingTile;
+    row8.at(0) = new Wave;
+    row8.at(1) = new Wave;
+    row8.at(2) = new Wave;
+    row8.at(3) = new Wave;
+    row8.at(4) = new Wave;
+    row8.at(5) = new Wave;
+    row8.at(6) = new Wave;
+    row8.at(7) = new Wave;
+    row8.at(8) = new Wave;
+    row8.at(9) = new Wave;
 
-    row9.at(0) = new EmptyPlayingTile;
-    row9.at(1) = new EmptyPlayingTile;
-    row9.at(2) = new EmptyPlayingTile;
-    row9.at(3) = new EmptyPlayingTile;
-    row9.at(4) = new EmptyPlayingTile;
-    row9.at(5) = new EmptyPlayingTile;
-    row9.at(6) = new EmptyPlayingTile;
-    row9.at(7) = new EmptyPlayingTile;
-    row9.at(8) = new EmptyPlayingTile;
-    row9.at(9) = new EmptyPlayingTile;
+    row9.at(0) = new Wave;
+    row9.at(1) = new Wave;
+    row9.at(2) = new Wave;
+    row9.at(3) = new Wave;
+    row9.at(4) = new Wave;
+    row9.at(5) = new Wave;
+    row9.at(6) = new Wave;
+    row9.at(7) = new Wave;
+    row9.at(8) = new Wave;
+    row9.at(9) = new Wave;
 
-    row10.at(0) = new EmptyPlayingTile;
-    row10.at(1) = new EmptyPlayingTile;
-    row10.at(2) = new EmptyPlayingTile;
-    row10.at(3) = new EmptyPlayingTile;
-    row10.at(4) = new EmptyPlayingTile;
-    row10.at(5) = new EmptyPlayingTile;
-    row10.at(6) = new EmptyPlayingTile;
-    row10.at(7) = new EmptyPlayingTile;
-    row10.at(8) = new EmptyPlayingTile;
-    row10.at(9) = new EmptyPlayingTile;
+    row10.at(0) = new Wave;
+    row10.at(1) = new Wave;
+    row10.at(2) = new Wave;
+    row10.at(3) = new Wave;
+    row10.at(4) = new Wave;
+    row10.at(5) = new Wave;
+    row10.at(6) = new Wave;
+    row10.at(7) = new Wave;
+    row10.at(8) = new Wave;
+    row10.at(9) = new Wave;
 
 
 
@@ -145,6 +148,7 @@ Grid::Grid() {
 }
 
 void Grid::print() {
+    std::cout << "-----------------------MAP-----------------------" << std::endl;
     for(auto row:m_grid){
         for(auto PlayingTile:row){
             PlayingTile->print();
@@ -152,5 +156,18 @@ void Grid::print() {
         }
         std::cout << std::endl;
     }
+    std::cout << "\n";
 
 }
+
+//void Grid::accessStock() {
+//    m_grid.at(2)
+//}
+
+//void Grid::addBuilding(unsigned int row, unsigned int col, Building type) {
+//    if (type == Building::Base && base == 0){
+//        Base* base = new Base();
+//        base->print();
+//        base = 1;
+//    }
+//}

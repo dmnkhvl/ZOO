@@ -6,7 +6,11 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_BASE_H
 
 
-class Base {
+#include "PlayingTile.h"
+
+class Base: public PlayingTile {
+public:
+    void print();
 
 };
 

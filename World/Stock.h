@@ -6,8 +6,17 @@
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_STOCK_H
 
 
-class Stock {
+#include "PlayingTile.h"
 
+class Stock: public PlayingTile{
+    int m_wood = 0;
+    int m_stone = 0;
+    int m_gold = 0;
+    int m_food = 0;
+public:
+    Stock();
+    void printResources();
+    void print();
 };
 
 

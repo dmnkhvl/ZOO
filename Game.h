@@ -12,6 +12,7 @@ public:
     Game();
     void play();
     void mapInic();
+    void seeResources();
     void mainDesicionSwitch();
 };
 

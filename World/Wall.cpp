@@ -3,10 +3,8 @@
 //
 
 #include <iostream>
-#include "Base.h"
+#include "Wall.h"
 
-
-
-void Base::print() {
-        std::cout << "-B1-";
+void Wall::print() {
+    std::cout << "||||";
 }

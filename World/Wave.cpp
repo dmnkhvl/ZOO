@@ -3,10 +3,8 @@
 //
 
 #include <iostream>
-#include "Base.h"
+#include "Wave.h"
 
-
-
-void Base::print() {
-        std::cout << "-B1-";
+void Wave::print() {
+    std::cout << "~~~~";
 }

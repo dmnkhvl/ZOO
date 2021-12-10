@@ -3,3 +3,7 @@
 //
 
 #include "PlayingTile.h"
+
+int PlayingTile::getLevel() {
+    return m_level;
+}

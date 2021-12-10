@@ -3,10 +3,8 @@
 //
 
 #include <iostream>
-#include "Base.h"
+#include "Gate.h"
 
-
-
-void Base::print() {
-        std::cout << "-B1-";
+void Gate::print() {
+    std::cout << "|<<   >>|";
 }

@@ -6,5 +6,5 @@
 #include <iostream>
 
 void EmptyPlayingTile::print() {
-    std::cout << "---";
+    std::cout << "----";
 }

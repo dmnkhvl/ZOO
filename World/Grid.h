@@ -5,6 +5,7 @@
 #ifndef BUDOVATELSKA_HRA_ZOOPROJEKT_GRID_H
 #define BUDOVATELSKA_HRA_ZOOPROJEKT_GRID_H
 #include "EmptyPlayingTile.h"
+#include "Base.h"
 #include <vector>
 
 class Grid {
@@ -14,6 +15,7 @@ class Grid {
 public:
     Grid();
     void print();
+    void accessStock();
 };
 
 
