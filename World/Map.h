@@ -7,17 +7,20 @@
 
 #include "EmptyPlayingTile.h"
 #include "Buildings/Base.h"
+#include "Buildings/Wave.h"
 #include <vector>
+#include <array>
 
 class Map {
-//    unsigned int m_numberOfRows;
-//    unsigned int m_numberOfColumns;
-    std::vector<std::vector<PlayingTile *>> m_grid;
+    static const unsigned int m_numOfRows = 10;
+    static const unsigned int m_numOfCols = 10;
+    std::array<std::array<PlayingTile*,m_numOfRows>, m_numOfCols> m_grid;
 public:
     Map();
-
+//    PlayingTile* getTileFromMap(unsigned int row, unsigned int col);
+    void addBuildingIntoMap();
     void print();
-
+    void deleteMap();
     void accessStock();
 };
 

@@ -6,5 +6,5 @@
 #include "Gate.h"
 
 void Gate::print() {
-    std::cout << "|<<   >>|";
+    std::cout << "|<>|";
 }

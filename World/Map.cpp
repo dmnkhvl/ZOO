@@ -10,142 +10,30 @@
 #include "Buildings/Gate.h"
 
 Map::Map() {
-    //inicializacia
-    std::vector<PlayingTile*> row1(9, nullptr);
-    std::vector<PlayingTile*> row2(10, nullptr);
-    std::vector<PlayingTile*> row3(10, nullptr);
-    std::vector<PlayingTile*> row4(10, nullptr);
-    std::vector<PlayingTile*> row5(10, nullptr);
-    std::vector<PlayingTile*> row6(10, nullptr);
-    std::vector<PlayingTile*> row7(10, nullptr);
-    std::vector<PlayingTile*> row8(10, nullptr);
-    std::vector<PlayingTile*> row9(10, nullptr);
-    std::vector<PlayingTile*> row10(10, nullptr);
-    //naplnenie
-
-    row1.at(0) = new Wall();
-    row1.at(1) = new Wall();
-    row1.at(2) = new Wall();
-    row1.at(3) = new Wall();
-    row1.at(4) = new Gate();
-    row1.at(5) = new Wall();
-    row1.at(6) = new Wall();
-    row1.at(7) = new Wall();
-    row1.at(8) = new Wall();
-
-    row2.at(0) = new Base();
-    row2.at(1) = new EmptyPlayingTile;
-    row2.at(2) = new EmptyPlayingTile;
-    row2.at(3) = new EmptyPlayingTile;
-    row2.at(4) = new EmptyPlayingTile;
-    row2.at(5) = new EmptyPlayingTile;
-    row2.at(6) = new EmptyPlayingTile;
-    row2.at(7) = new EmptyPlayingTile;
-    row2.at(8) = new EmptyPlayingTile;
-    row2.at(9) = new Stock();
-
-    row3.at(0) = new EmptyPlayingTile;
-    row3.at(1) = new EmptyPlayingTile;
-    row3.at(2) = new EmptyPlayingTile;
-    row3.at(3) = new EmptyPlayingTile;
-    row3.at(4) = new EmptyPlayingTile;
-    row3.at(5) = new EmptyPlayingTile;
-    row3.at(6) = new EmptyPlayingTile;
-    row3.at(7) = new EmptyPlayingTile;
-    row3.at(8) = new EmptyPlayingTile;
-    row3.at(9) = new EmptyPlayingTile;
-
-    row4.at(0) = new EmptyPlayingTile;
-    row4.at(1) = new EmptyPlayingTile;
-    row4.at(2) = new EmptyPlayingTile;
-    row4.at(3) = new EmptyPlayingTile;
-    row4.at(4) = new EmptyPlayingTile;
-    row4.at(5) = new EmptyPlayingTile;
-    row4.at(6) = new EmptyPlayingTile;
-    row4.at(7) = new EmptyPlayingTile;
-    row4.at(8) = new EmptyPlayingTile;
-    row4.at(9) = new EmptyPlayingTile;
-
-    row5.at(0) = new EmptyPlayingTile;
-    row5.at(1) = new EmptyPlayingTile;
-    row5.at(2) = new EmptyPlayingTile;
-    row5.at(3) = new EmptyPlayingTile;
-    row5.at(4) = new EmptyPlayingTile;
-    row5.at(5) = new EmptyPlayingTile;
-    row5.at(6) = new EmptyPlayingTile;
-    row5.at(7) = new EmptyPlayingTile;
-    row5.at(8) = new EmptyPlayingTile;
-    row5.at(9) = new EmptyPlayingTile;
-
-    row6.at(0) = new EmptyPlayingTile;
-    row6.at(1) = new EmptyPlayingTile;
-    row6.at(2) = new EmptyPlayingTile;
-    row6.at(3) = new EmptyPlayingTile;
-    row6.at(4) = new EmptyPlayingTile;
-    row6.at(5) = new EmptyPlayingTile;
-    row6.at(6) = new EmptyPlayingTile;
-    row6.at(7) = new EmptyPlayingTile;
-    row6.at(8) = new EmptyPlayingTile;
-    row6.at(9) = new EmptyPlayingTile;
-
-    row7.at(0) = new EmptyPlayingTile;
-    row7.at(1) = new EmptyPlayingTile;
-    row7.at(2) = new EmptyPlayingTile;
-    row7.at(3) = new EmptyPlayingTile;
-    row7.at(4) = new EmptyPlayingTile;
-    row7.at(5) = new EmptyPlayingTile;
-    row7.at(6) = new EmptyPlayingTile;
-    row7.at(7) = new EmptyPlayingTile;
-    row7.at(8) = new EmptyPlayingTile;
-    row7.at(9) = new EmptyPlayingTile;
-
-    row8.at(0) = new Wave;
-    row8.at(1) = new Wave;
-    row8.at(2) = new Wave;
-    row8.at(3) = new Wave;
-    row8.at(4) = new Wave;
-    row8.at(5) = new Wave;
-    row8.at(6) = new Wave;
-    row8.at(7) = new Wave;
-    row8.at(8) = new Wave;
-    row8.at(9) = new Wave;
-
-    row9.at(0) = new Wave;
-    row9.at(1) = new Wave;
-    row9.at(2) = new Wave;
-    row9.at(3) = new Wave;
-    row9.at(4) = new Wave;
-    row9.at(5) = new Wave;
-    row9.at(6) = new Wave;
-    row9.at(7) = new Wave;
-    row9.at(8) = new Wave;
-    row9.at(9) = new Wave;
-
-    row10.at(0) = new Wave;
-    row10.at(1) = new Wave;
-    row10.at(2) = new Wave;
-    row10.at(3) = new Wave;
-    row10.at(4) = new Wave;
-    row10.at(5) = new Wave;
-    row10.at(6) = new Wave;
-    row10.at(7) = new Wave;
-    row10.at(8) = new Wave;
-    row10.at(9) = new Wave;
-
-
-
-    m_grid.push_back(row1);
-    m_grid.push_back(row2);
-    m_grid.push_back(row3);
-    m_grid.push_back(row4);
-    m_grid.push_back(row6);
-    m_grid.push_back(row7);
-    m_grid.push_back(row8);
-    m_grid.push_back(row9);
-    m_grid.push_back(row10);
-
-
+    for(int i=0; i < m_numOfCols; i++){
+        for(int j=0; j < m_numOfRows; j++){
+            //vytvorenie hradieb
+            if (i < 1){
+                m_grid[i][j] = new Wall();
+            }
+            // vytvorenie zakladnych tilov
+            else if (i < m_numOfRows - 3) {
+                m_grid[i][j] = new EmptyPlayingTile();
+            }
+            // vytvorenie vody
+            else {
+                m_grid[i][j] = new Wave();
+            }
+        }
+    }
+    // vytvorenie Zakladnych budov
+    m_grid[1][0] = new Base();
+    m_grid[1][1] = new Stock();
+    // vytvorenie Brany
+    m_grid[0][m_numOfCols /2] = new Gate();
+    m_grid[0][(m_numOfCols /2) - 1 ] = new Gate();
 }
+
 
 void Map::print() {
     std::cout << "-----------------------MAP-----------------------" << std::endl;
@@ -159,6 +47,36 @@ void Map::print() {
     std::cout << "\n";
 
 }
+
+void Map::addBuildingIntoMap() {
+    unsigned int row;
+    unsigned int col;
+    std::cout << "Where would you like to build your building?" << std::endl;
+    std::cout << "Row: "; std::cin >> row; row--;
+    std::cout << "Col: "; std::cin >> col; col--;
+    if ((row < m_numOfRows) && (col < m_numOfCols)){
+        std::cout << "What type of building would you like?" << std::endl;
+        std::cout << "[1] - Wave [2] - Wall [99] - exit " << std::endl;
+        unsigned int decision;
+        std::cin >> decision;
+        switch (decision) {
+            case 1:
+                m_grid[row][col] = new Wave();
+                std::cout << "Wave built" << std::endl;
+                break;
+            case 2:
+                m_grid[row][col] = new Wall();
+                std::cout << "Wall built" << std::endl;;
+                break;
+            default:
+                break;
+        }
+    } else {
+        std::cerr << "Invalid position" << std::endl;
+    }
+
+}
+
 
 //void Map::accessStock() {
 //    m_grid.at(2)
